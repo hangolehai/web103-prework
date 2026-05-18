@@ -1,0 +1,54 @@
+.creator-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(109, 40, 217, 0.1);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.creator-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(109, 40, 217, 0.15);
+}
+
+.creator-card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.creator-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.creator-card-body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.creator-card-description {
+  margin: 0 0 0.75rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.creator-card-link {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.creator-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
