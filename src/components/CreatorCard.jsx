@@ -25,10 +25,10 @@ export default function CreatorCard({ creator }) {
         </p>
         <div className="creator-card-actions">
           <Link to={`/view/${id}`} className="button secondary">
-            <span aria-hidden="true">👁️</span> View
+            View
           </Link>
           <Link to={`/edit/${id}`} className="button primary">
-            <span aria-hidden="true">✏️</span> Edit
+            Edit
           </Link>
         </div>
       </div>
