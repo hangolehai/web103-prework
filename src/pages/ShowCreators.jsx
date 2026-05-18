@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom'
 import CreatorCard from '../components/CreatorCard'
 
-// Placeholder data for Checkpoint 1 — replaced with Supabase fetch in Step 5
-const PLACEHOLDER_CREATORS = []
-
-export default function ShowCreators({ creators = PLACEHOLDER_CREATORS }) {
+export default function ShowCreators({ creators, fetchError }) {
   return (
     <>
       <div className="page-header">
@@ -14,11 +11,19 @@ export default function ShowCreators({ creators = PLACEHOLDER_CREATORS }) {
         </Link>
       </div>
 
-      {creators.length === 0 ? (
+      {fetchError && <p className="empty-state">{fetchError}</p>}
+
+      {!fetchError && creators === null && (
+        <p className="empty-state">Loading creators...</p>
+      )}
+
+      {!fetchError && creators !== null && creators.length === 0 && (
         <p className="empty-state">
           No creators yet. Add your first favorite creator to the Creatorverse!
         </p>
-      ) : (
+      )}
+
+      {!fetchError && creators !== null && creators.length > 0 && (
         <div className="creator-grid">
           {creators.map((creator) => (
             <CreatorCard key={creator.id} creator={creator} />

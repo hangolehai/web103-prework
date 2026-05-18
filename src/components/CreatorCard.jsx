@@ -6,15 +6,21 @@ export default function CreatorCard({ creator }) {
 
   return (
     <article className="creator-card">
-      {imageURL && (
+      {imageURL ? (
         <img src={imageURL} alt={name} className="creator-card-image" />
+      ) : (
+        <div className="creator-card-image-placeholder" aria-hidden="true">
+          No image
+        </div>
       )}
       <div className="creator-card-body">
-        <h3>{name}</h3>
+        <h3 className="creator-card-name">{name}</h3>
         <p className="creator-card-description">{description}</p>
-        <a href={url} target="_blank" rel="noreferrer" className="creator-card-link">
-          Visit channel
-        </a>
+        <p className="creator-card-url">
+          <a href={url} target="_blank" rel="noreferrer">
+            {url}
+          </a>
+        </p>
         <div className="creator-card-actions">
           <Link to={`/view/${id}`} className="button secondary">
             View
