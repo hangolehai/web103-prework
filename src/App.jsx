@@ -36,7 +36,7 @@ export default function App() {
       element: <ShowCreators creators={creators} fetchError={fetchError} />,
     },
     { path: '/view/:id', element: <ViewCreator /> },
-    { path: '/edit/:id', element: <EditCreator /> },
+    { path: '/edit/:id', element: <EditCreator setCreators={setCreators} /> },
     { path: '/add', element: <AddCreator setCreators={setCreators} /> },
   ])
 
