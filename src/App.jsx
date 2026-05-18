@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useRoutes } from 'react-router-dom'
+import { useRoutes, Link } from 'react-router-dom'
 import { supabase } from './client.js'
 import ShowCreators from './pages/ShowCreators'
 import ViewCreator from './pages/ViewCreator'
@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Creatorverse</h1>
+        <h1><Link to="/" style={{color: 'white', textDecoration: 'none'}}>Creatorverse</Link></h1>
         <p>Your favorite content creators, in one place</p>
       </header>
       <main className="app-main">{element}</main>

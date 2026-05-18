@@ -60,8 +60,8 @@ export default function ViewCreator() {
           <h2>{creator.name}</h2>
           <p>{creator.description}</p>
           <p>
-            <a href={creator.url} target="_blank" rel="noreferrer">
-              {creator.url}
+            <a href={creator.url} target="_blank" rel="noreferrer" className="button secondary">
+              Visit Channel ↗
             </a>
           </p>
         </div>
