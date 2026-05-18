@@ -37,7 +37,7 @@ export default function App() {
     },
     { path: '/view/:id', element: <ViewCreator /> },
     { path: '/edit/:id', element: <EditCreator /> },
-    { path: '/add', element: <AddCreator /> },
+    { path: '/add', element: <AddCreator setCreators={setCreators} /> },
   ])
 
   return (

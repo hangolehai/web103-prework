@@ -14,7 +14,9 @@ export default function CreatorCard({ creator }) {
         </div>
       )}
       <div className="creator-card-body">
-        <h3 className="creator-card-name">{name}</h3>
+        <h3 className="creator-card-name">
+          <Link to={`/view/${id}`}>{name}</Link>
+        </h3>
         <p className="creator-card-description">{description}</p>
         <p className="creator-card-url">
           <a href={url} target="_blank" rel="noreferrer">
