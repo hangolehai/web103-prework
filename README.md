@@ -37,9 +37,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://www.loom.com/share/83e80977cb4848cf98cc3483f297521c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with ... 👉🏿 GIF tool here
 
 ## Notes
 
